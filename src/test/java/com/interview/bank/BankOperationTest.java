@@ -9,13 +9,16 @@ class BankOperationTest {
     @Test
     public void checkDepositOperation() {
         BankOperation bankOperation = new BankOperation(TypeOperation.DEPOSIT,50);
-        assertEquals(bankOperation.getType(), TypeOperation.DEPOSIT);
+        assertEquals(TypeOperation.DEPOSIT, bankOperation.getType());
+        assertEquals(50.0,bankOperation.getAmount(), 0.1);
     }
 
     @Test
-    public void checkWithDrawalOperation() {
-        BankOperation bankOperation = new BankOperation(TypeOperation.WITHDRAWAL,50);
-        assertEquals(bankOperation.getType(), TypeOperation.WITHDRAWAL);
+    public void checkWithdrawalOperation() {
+        BankOperation bankOperation = new BankOperation(TypeOperation.WITHDRAWAL,23);
+        assertEquals(TypeOperation.WITHDRAWAL,bankOperation.getType());
+        assertEquals(23.0,bankOperation.getAmount(), 0.1);
+
     }
 
 }
