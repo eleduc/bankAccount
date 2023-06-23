@@ -1,21 +1,24 @@
 package com.interview.bank;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
+/**
+ * This class is responsible to define an operation done on an account
+ */
 public class BankOperation {
 
-    private final Date date;
+    private final LocalDateTime date;
     private final TypeOperation type;
     private final double amount;
 
 
     public BankOperation(TypeOperation type, final double amount) {
-        this.date = new Date();
+        this.date = LocalDateTime.now();
         this.type = type;
         this.amount = amount;
     }
 
-    public Date getDate() {
+    public LocalDateTime getLocalDateTime() {
         return date;
     }
 

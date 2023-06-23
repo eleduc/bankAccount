@@ -5,6 +5,9 @@ import com.interview.bank.BankOperation;
 
 import java.util.List;
 
+/**
+ * This defines what are the available services delivered by the bank on an account
+ */
 public class BankService {
 
     public boolean doDeposit(final BankAccount account, final double amount) {
